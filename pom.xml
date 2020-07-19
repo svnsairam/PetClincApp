@@ -21,7 +21,7 @@
 
     <groupId>guru.springframwork</groupId>
     <artifactId>pet-clinic-custom-app</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>pet-clinic-custom-app</name>
     <description>Developing pet clinic application using Spring boot</description>
 
