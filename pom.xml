@@ -45,8 +45,8 @@
             </plugin>
         </plugins>
     </build>
-<scm>
-    <developerConnection>scm:git@github.com:svnsairam/PetClincApp.git</developerConnection>
-  <tag>pet-clinic-custom-app-0.0.1</tag>
-  </scm>
+
+    <scm>
+    <developerConnection>scm:git:git@github.com:svnsairam/PetClincApp.git</developerConnection>
+   </scm>
 </project>
