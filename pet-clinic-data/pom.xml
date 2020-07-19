@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--
+    we are metioning that pet-clinic-data is child of on pet-clinic-custom-app
+    -->
+    <parent>
+        <artifactId>pet-clinic-custom-app</artifactId>
+        <groupId>guru.springframwork</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>pet-clinic-data</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+<!--    This tells the spring to skip the repackage step which tries to create a fat/uber jar for this module.-->
+<!--    Since pet-clinic-data module doesn't have main class i.e @SpringBootApplicaion-->
+<!--    We should mention spring to skip creating fat jar. and tell it to create plain jar.-->
+<!--    Fat jar is an executable jar and by default spring tries to create fat jar and searches-->
+<!--    for main class i.e @SpringBootApplicaion class and when sprig doesn't find main class it-->
+<!--    throws error that "Unable to find Main class".-->
+<!--    So, if a module doesn't contain main class i.e @SpringBootApplicaion class we should tell the-->
+<!--    spring to skip creating a fat jar. So that spring creates plain jar which is a jar of normal class files-->
+<!--    present in the module.-->
+
+    <properties>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
