@@ -1,13 +1,12 @@
-package guru.springframwork.petcliniccustomapp;
+package guru.springframework.petcliniccustomapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PetClinicCustomAppApplication {
-
+public class PetClinicCustomDataApp {
     public static void main(String[] args) {
-        SpringApplication.run(PetClinicCustomAppApplication.class, args);
+        SpringApplication.run(PetClinicCustomDataApp.class, args);
     }
 
 }
