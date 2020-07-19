@@ -21,7 +21,7 @@
 
     <groupId>guru.springframwork</groupId>
     <artifactId>pet-clinic-custom-app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>pet-clinic-custom-app</name>
     <description>Developing pet clinic application using Spring boot</description>
 
@@ -48,5 +48,6 @@
 
     <scm>
     <developerConnection>scm:git:git@github.com:svnsairam/PetClincApp.git</developerConnection>
-   </scm>
+     <tag>pet-clinic-custom-app-0.0.1</tag>
+  </scm>
 </project>
