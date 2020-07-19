@@ -48,5 +48,5 @@
 
     <scm>
     <developerConnection>scm:git:git@github.com:svnsairam/PetClincApp.git</developerConnection>
-   </scm>
+  </scm>
 </project>
