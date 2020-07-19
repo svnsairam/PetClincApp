@@ -4,12 +4,10 @@ import guru.springframework.petcliniccustomapp.model.Owner;
 
 import java.util.Set;
 
-public interface OwnerService {
-    Owner findById(Long id);
+public interface OwnerService extends CrudService<Owner, Long>{
+    // Here all the services are defined by crudService
+    // Since we are extending CrudService we can have those methods in this interface also
 
-    Owner save(Owner owner);
-
+    // this a custom method specific to Owner Service.
     Owner findByLastName(String lastName);
-
-    Set<Owner> findAll();
 }
