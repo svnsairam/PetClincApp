@@ -5,10 +5,7 @@ import guru.springframework.petcliniccustomapp.model.Pet;
 
 import java.util.Set;
 
-public interface PetService {
-    Pet findById(Long id);
-
-    Pet save(Owner owner);
-
-    Set<Pet> findAll();
+public interface PetService extends CrudService<Pet, Long>{
+    // Here all the services are defined by crudService
+    // Since we are extending CrudService we can have those methods in this interface also
 }
